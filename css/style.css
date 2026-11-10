@@ -1,0 +1,412 @@
+/* Сброс стандартных отступов и размеров */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Плавная прокрутка */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Убираем стандартное оформление списков */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Убираем подчёркивание у ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Убираем стандартную рамку у кнопок и полей */
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Убираем стандартную рамку у кнопок */
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Убираем рамку у изображений */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Убираем стандартный стиль заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font: inherit;
+}
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white-color: #FFFFFF;
+    --grey-color: #DCE3EE;
+    --black-color: #202B3C;
+    --lightBlack-color: #344054;
+    --grey-color: #7B8494;
+}
+
+body{
+    
+    font-family: "Inter", sans-serif;
+}
+
+.main {
+    position: relative;
+    width: 1000px;
+    min-height: 645px;
+    background: #F3F5FA;
+    padding: 11px 255px;
+}
+
+.main__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.header__title {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--black-color);
+}
+.header__subtitle {
+    font-weight: 400;
+    font-size: 8px;
+    color: #7b8494;
+}
+.saveForm {
+    border-radius: 7px;
+    width: 62px;
+    height: 23px;
+    background: #526df5;
+    font-weight: 600;
+    font-size: 8px;
+    color: var(--white-color);
+    transition: all 0.3s ease;
+}
+
+.saveForm:hover {
+    background: #344054;
+    /* transform: translateY(-2px); */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.selectAction {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+.selectAction__button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 10px 7px 9px;
+    border-radius: 13px;
+    
+    background: var(--white-color);
+    font-weight: 400;
+    font-size: 8px;
+    color: #344054;
+}
+.selectAction__button:hover {
+    background: #E4E7EC;
+}
+
+
+.selectAction__profile {
+    color: var(--white-color);
+    background: #202b3c;
+}
+.selectAction__profile:hover {
+    color: var(--white-color);
+    background: #202b3c;
+}
+
+.personal {
+    border: 1px solid #e4e9f2;
+    border-radius: 12px;
+    width: 490px;
+    height: 202px;
+    background-color: var(--white-color);
+    padding: 18px 17px 7px 8px;
+    margin-bottom: 17px;
+}
+.title {
+    font-weight: 600;
+    font-size: 10px;
+    color: #202b3c;
+    padding-bottom: 10px;
+    
+}
+
+label{
+    display: block;
+    font-weight: 400;
+    font-size: 7px;
+    color: #7a8495;
+    margin-bottom: 4px;
+}
+.fullName {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 7px;
+}
+.name {
+    flex: 1;
+}
+.input__data,
+.country select{
+    border: 1px solid #dce3ee;
+    border-radius: 9px;
+    outline: none;
+    width: 100%;
+    font-size: 8px;
+    padding: 8px 9px 11px 9px;
+    font-weight: 400;
+    height: 29px;
+    color: #344054;
+    transition: all 0.2s ease;
+    background: #fafbfd;
+}
+
+.input__data:hover,
+.country select:hover,
+.aboutMe textarea:hover{
+    border-color: #98a2b3;
+}
+
+/* Поле активно — пользователь нажал на него */
+.input__data:focus,
+.country select:focus,
+.aboutMe textarea:focus {
+    border-color: #526DF5;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.12);
+}
+
+.surname {
+    flex: 1;
+}
+.otherInfo {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.email {
+    flex: 1;
+    min-width: 0;
+}
+.country {
+    flex: 1;
+    min-width: 0;
+    
+}
+
+select{
+    
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 24 24' fill='none' stroke='%23344054' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: right 175px center;
+    
+}
+.aboutMe{
+    width: 100%;
+}
+
+.aboutMe textarea{
+    outline: none;
+    border: 1px solid #dce3ee;
+    border-radius: 9px;
+    width: 100%;
+    height: 42px;
+    background: #fafbfd;
+    font-weight: 400;
+    font-size: 8px;
+    color: #344054;
+    resize: none;
+    padding: 10px 9px;
+    
+}
+
+.safety {
+    border: 1px solid #e4e9f2;
+    border-radius: 12px;
+    width: 100%;
+    height: 88px;
+    background: var(--white-color);
+    padding: 13px 13px 11px 12px;
+    margin-bottom: 12px;
+}
+.password{
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    width: 100%;
+}
+.newPass, .replayPass{
+    flex: 1;
+}
+
+.newPass input, .replayPass input{
+    border: 1px solid #dce3ee;
+    border-radius: 9px;
+    outline: none;
+    width: 100%;
+    font-size: 8px;
+    padding: 8px 9px 11px 9px;
+    font-weight: 400;
+    height: 29px;
+    color: #344054;
+    transition: all 0.2s ease;
+    background: #fafbfd;
+}
+
+.newPass input:hover, .replayPass input:hover{
+    border-color: #98a2b3;
+}
+
+/* Поле активно — пользователь нажал на него */
+.newPass input:focus, .replayPass input:focus {
+    border-color: #526DF5;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.12);
+}
+
+
+.notifications {
+    border: 1px solid #e4e9f2;
+    border-radius: 12px;
+    width: 100%;
+    height: 113px;
+    background: var(--white-color);
+    padding: 13px 13px 13px 12px;
+    margin-bottom: 12px;
+}
+p input{
+    border: 1px solid #d5dde9;
+    border-radius: 2px;
+    width: 8px;
+    height: 8px;
+}
+
+p{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 400;
+    font-size: 7px;
+    color: #7a8495;
+    margin-bottom: 11px;
+}
+.remove_account {
+    border: 1px solid #f8dcdd;
+    border-radius: 12px;
+    width: 100%;
+    height: 71px;
+    background: #fff7f7;
+    padding: 13px 13px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 19px;
+}
+
+p:last-of-type{
+    font-weight: 400;
+    font-size: 8px;
+    color: #344054;
+    margin-bottom: 0px;
+}
+.remove__operation {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.removeButton{
+    border-radius: 7px;
+    width: 87px;
+    height: 23px;
+    background: #f45c67;
+    font-weight: 600;
+    font-size: 7px;
+    color: #fff;
+    padding: 7px 21px 8px 7px;
+    transition: all 0.2s ease;
+}
+
+.removeButton:hover {
+  background-color: #FECACA;
+  color: #991B1B;
+}
+
+.removeButton:focus{
+  outline: 2px solid #DC2626;
+  outline-offset: 2px;
+}
+
+.removeButton:active {
+  background-color: #991B1B;
+  color: #FFFFFF;
+}
+footer{
+    display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+}
+.otmena {
+    border-radius: 7px;
+    width: 48px;
+    height: 22px;
+    background: #e9edf4;
+    padding: auto;
+    font-weight: 600;
+    font-size: 7px;
+    color: #344054;
+}
+.saveProfile {
+    border-radius: 7px;
+    width: 109px;
+    height: 22px;
+    background: #526df5;
+    font-weight: 600;
+    font-size: 7px;
+    color: #fff;
+    padding: 7px 23px 7px 8px;
+    white-space: nowrap;
+}
